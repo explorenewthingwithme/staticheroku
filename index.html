@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroKu</title>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0px;
+        }
+        
+        #but-nav {
+            padding: 5px 20px;
+            border: none;
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+        }
+        
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: rgb(222, 189, 0);
+            font-weight: 500;
+        }
+        
+        #but-nav:hover {
+            background-color: #010e42;
+            border-radius: 4px;
+        }
+        
+        header {
+            background-color: rgba(0, 39, 86, 0.8);
+            padding: 1% 0%;
+            color: white;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        #h1 {
+            font-size: 80px;
+            color: #ffffff;
+        }
+        
+        body {
+            background-image: url('SL-043021-42650-28.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        h2 {
+            color: rgb(5, 111, 211);
+        }
+        
+        h3 {
+            color: rgb(222, 189, 0);
+            font-size: 30px;
+        }
+        
+        footer {
+            text-align: center;
+            margin: 0px;
+            padding: 3%;
+            background-color: rgba(0, 39, 86, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-around;">
+            <div>
+                <button id="but-nav-okta" class="but-nav">Okta</button>
+            </div>
+            <div id="MyHero">
+                <h1 id="Myhero" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">MyHero</h1>
+            </div>
+            <div>
+                <button id="but-nav-najma" class="but-nav">Najma</button>
+            </div>
+        </div>
+    </header>
+    <main class="content" id="main-content">
+        <h1 id="h1">Selamat Datang di MyHero</h1>
+        <h3 id="h3">Situs Single Page Hero</h3>
+    </main>
+    <footer>
+        <a href="https://www.freepik.com/free-vector/memphis-blue-background-with-halftone-line-elements_18309234.htm#query=abstract%20background&position=11&from_view=keyword&track=ais_user&uuid=58f90627-ce29-437c-864a-44ca5338c3c8">Image by starline</a>        on Freepik
+    </footer>
+    <script>
+        document.getElementById('but-nav-okta').addEventListener('click', function() {
+            var mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = `
+                <h1 id="h1" style="color: black;">Okta's Page</h1>
+                <h2 style="font-size: 50px;">Politeknik Negeri Jakarta</h2>
+            `;
+            document.body.style.backgroundImage = "url('17545.jpg')";
+        });
+
+        document.getElementById('but-nav-najma').addEventListener('click', function() {
+            var mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = `
+                <h1 id="h1" style="color: black;">Najma's Page</h1>
+                                <h2 style="font-size: 50px;">Politeknik Negeri Jakarta</h2>
+            `;
+            document.body.style.backgroundImage = "url('colorful-abstract-textured-background-design.jpg')";
+        });
+    </script>
+</body>
+
+</html>
